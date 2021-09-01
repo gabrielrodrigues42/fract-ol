@@ -51,4 +51,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+norm:
+	norminette libft includes srcs
+
+.PHONY: all clean fclean re norm
