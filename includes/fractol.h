@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:09:53 by gandrade          #+#    #+#             */
-/*   Updated: 2021/08/31 12:34:56 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/01 18:58:09 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,9 @@
 # include "mlx.h"
 # include "libft.h"
 # include <math.h>
+# include <stdio.h>
+# include <fcntl.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 #endif
