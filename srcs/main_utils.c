@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_handlers.c                                   :+:      :+:    :+:   */
+/*   main_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/01 22:08:35 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/02 23:10:55 by gandrade         ###   ########.fr       */
+/*   Created: 2021/09/03 01:53:28 by gandrade          #+#    #+#             */
+/*   Updated: 2021/09/03 01:54:29 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,12 @@ void	check_input_error(int argc, char *fractal)
 		printf("Ex: ./fract-ol Mandelbrot\nEx: ./fract-ol Julia\n\n");
 		exit(EXIT_FAILURE);
 	}
+}
+
+void	parse_fractal(char *fractal)
+{
+	if (ft_strcmp(fractal, "Mandelbrot") == 0)
+		create_mandelbrot();
+	if (ft_strcmp(fractal, "Julia") == 0)
+		create_julia();
 }
