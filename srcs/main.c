@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:10:12 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/01 22:05:45 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/02 22:38:31 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,6 @@ int	main(int argc, char *argv[])
 
 	fractal = argv[1];
 	check_input_error(argc, fractal);
+	parse_fractal(fractal);
 	exit(EXIT_SUCCESS);
 }

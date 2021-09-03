@@ -6,7 +6,7 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/01 18:51:03 by gandrade          #+#    #+#              #
-#    Updated: 2021/09/01 22:12:05 by gandrade         ###   ########.fr        #
+#    Updated: 2021/09/02 23:32:43 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ INCLUDES = $(addprefix -I, $(INCLUDES_DIR))
 SRCS_DIR = ./srcs
 OBJS_DIR = ./objs
 
-SRCS_FILES = main.c error_handlers.c \
+SRCS_FILES = main.c error_handler.c fractal.c \
 
 SRCS = $(addprefix $(SRCS_DIR)/, $(SRCS_FILES))
 OBJS = $(subst $(SRCS_DIR), $(OBJS_DIR), $(SRCS:.c=.o))
