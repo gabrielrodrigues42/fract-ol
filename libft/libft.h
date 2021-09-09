@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 01:33:39 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/01 18:46:39 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/08 23:41:30 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ char	*ft_itoa(int n);
 char	*ft_utoa(unsigned int n);
 char	*ft_htoa(unsigned int n, int converter);
 char	*ft_ptoa(size_t pointer);
+char	*ft_strtolower(char *str);
 
 /*
 ** Put Functions
