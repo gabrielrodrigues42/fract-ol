@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:09:53 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/03 21:34:01 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/08 23:52:03 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ typedef struct s_mlx_vars
 	void	*win;
 }	t_mlx_vars;
 
-void	create_mandelbrot(void);
-//void	create_julia(void);
+void	mandelbrot(void);
+//void	julia(void);
 void	mlx_handler(void);
 
 #endif
