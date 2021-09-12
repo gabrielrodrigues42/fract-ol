@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:09:53 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/08 23:52:03 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/12 12:04:54 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,39 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-typedef struct s_mlx_vars
+# define MAX_ITER 256
+# define WIDTH 1280
+# define HEIGHT 720
+
+typedef struct s_fractol
+{
+	char	*set;
+	double	x_max;
+	double	x_min;
+	double	y_max;
+	double	y_min;
+	double	x_view;
+	double	y_view;
+	int		iter;
+	void	(*f)();
+}	t_fractol;
+
+typedef struct s_mlx
 {
 	void	*mlx;
 	void	*win;
-}	t_mlx_vars;
+	void	*img;
+	char	*addr;
+	int		bpp;
+	int		line_len;
+	int		endian;
+}	t_mlx;
 
-void	mandelbrot(void);
-//void	julia(void);
-void	mlx_handler(void);
+void	parse_args(int argc, char **argv, t_fractol *fractol);
+void	mlx_handler(t_fractol *fractol);
+void	create_mandelbrot(t_fractol *fractol, t_mlx *mlx);
+void	create_julia(t_fractol *fractol);
+void	window_to_viewport(int x, int y, t_fractol *fractol);
+void	my_mlx_pixel_put(int x, int y, t_fractol *fractol, t_mlx *mlx);
 
 #endif

@@ -6,11 +6,11 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/01 18:51:03 by gandrade          #+#    #+#              #
-#    Updated: 2021/09/09 00:00:53 by gandrade         ###   ########.fr        #
+#    Updated: 2021/09/12 00:33:22 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fract-ol
+NAME = fractol
 
 CC = clang
 CFLAGS = -Wall -Wextra -Werror
@@ -34,7 +34,7 @@ INCLUDES = $(addprefix -I, $(INCLUDES_DIR))
 SRCS_DIR = ./srcs
 OBJS_DIR = ./objs
 
-SRCS_FILES = fractol.c mandelbrot.c mlx.c \
+SRCS_FILES = fractol.c parse_args.c mlx_handler.c mandelbrot.c julia.c viewport.c draw_image.c \
 
 SRCS = $(addprefix $(SRCS_DIR)/, $(SRCS_FILES))
 OBJS = $(subst $(SRCS_DIR), $(OBJS_DIR), $(SRCS:.c=.o))
