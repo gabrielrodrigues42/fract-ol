@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 21:28:35 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/11 23:40:15 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/12 12:23:05 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ void	parse_args(int argc, char **argv, t_fractol *fractol)
 		fractol->f = &create_mandelbrot;
 	else if (ft_strcmp(ft_strtolower(fractol->set), "julia") == 0)
 		fractol->f = &create_julia;
+	else if (ft_strcmp(ft_strtolower(fractol->set), "burningship") == 0)
+		fractol->f = &create_burning_ship;
 	else
 		print_error();
 }
@@ -31,6 +33,6 @@ static void	print_error(void)
 {
 	printf("\n[ERROR]\n\n");
 	printf("Please, enter a valid input. Follow the example.\n\n");
-	printf("Example: ./fractol mandelbrot\n	 ./fractol julia\n\n");
+	printf("Example: ./fractol Mandelbrot\n\t ./fractol BurningShip\n\n");
 	exit(0);
 }
