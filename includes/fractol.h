@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:09:53 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/12 12:22:06 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/13 20:12:01 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ typedef struct s_mlx
 void	parse_args(int argc, char **argv, t_fractol *fractol);
 void	mlx_handler(t_fractol *fractol);
 void	create_mandelbrot(t_fractol *fractol, t_mlx *mlx);
-void	create_julia(t_fractol *fractol);
+void	create_julia(t_fractol *fractol, t_mlx *mlx);
 void	create_burning_ship(t_fractol *fractol, t_mlx *mlx);
 void	window_to_viewport(int x, int y, t_fractol *fractol);
 void	my_mlx_pixel_put(int x, int y, t_fractol *fractol, t_mlx *mlx);

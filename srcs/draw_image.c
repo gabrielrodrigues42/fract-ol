@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 23:45:21 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/12 12:05:41 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/12 20:27:29 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ static int	color(t_fractol *fractol)
 	int		rgb;
 
 	t = fractol->iter / (double)MAX_ITER;
-	r = 1 * (1 - t) * t * t * t * 255;
-	g = 1 * (1 - t) * (1 - t) * t * t * 255;
-	b = 8 * (1 - t) * (1 - t) * (1 - t) * t * 255;
+	r = 9 * (1 - t) * t * t * t * 255;
+	g = 15 * (1 - t) * (1 - t) * t * t * 255;
+	b = 8.5 * (1 - t) * (1 - t) * (1 - t) * t * 255;
 	rgb = r << 16 | g << 8 | b;
 	return (rgb);
 }
