@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:09:53 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/13 20:12:01 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/15 01:51:33 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,9 @@
 # include "libft.h"
 # include <math.h>
 # include <stdio.h>
-# include <fcntl.h>
-# include <unistd.h>
 # include <stdlib.h>
 
-# define MAX_ITER 256
+# define MAX_ITER 2048
 # define WIDTH 1280
 # define HEIGHT 720
 
@@ -54,7 +52,7 @@ void	mlx_handler(t_fractol *fractol);
 void	create_mandelbrot(t_fractol *fractol, t_mlx *mlx);
 void	create_julia(t_fractol *fractol, t_mlx *mlx);
 void	create_burning_ship(t_fractol *fractol, t_mlx *mlx);
-void	window_to_viewport(int x, int y, t_fractol *fractol);
+void	window_to_viewport(int x, int y, t_fractol *fractol, t_mlx *mlx);
 void	my_mlx_pixel_put(int x, int y, t_fractol *fractol, t_mlx *mlx);
 
 #endif
