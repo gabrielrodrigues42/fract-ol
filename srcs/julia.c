@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 12:36:42 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/15 02:09:12 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/17 20:18:41 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ static void	calculate_julia(t_fractol *fractol)
 	{
 		x_tmp = fractol->x_view * fractol->x_view
 			- fractol->y_view * fractol->y_view;
-		fractol->y_view = 2 * fractol->x_view * fractol->y_view + 0.18;
-		fractol->x_view = x_tmp + -0.7269;
+		fractol->y_view = 2 * fractol->x_view * fractol->y_view + 0.355;
+		fractol->x_view = x_tmp + 0.355;
 		fractol->iter++;
 	}
 }

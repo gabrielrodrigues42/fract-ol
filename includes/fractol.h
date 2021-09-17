@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:09:53 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/15 01:51:33 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/17 20:18:09 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,22 +19,9 @@
 # include <stdio.h>
 # include <stdlib.h>
 
-# define MAX_ITER 2048
+# define MAX_ITER 128
 # define WIDTH 1280
 # define HEIGHT 720
-
-typedef struct s_fractol
-{
-	char	*set;
-	double	x_max;
-	double	x_min;
-	double	y_max;
-	double	y_min;
-	double	x_view;
-	double	y_view;
-	int		iter;
-	void	(*f)();
-}	t_fractol;
 
 typedef struct s_mlx
 {
@@ -46,6 +33,19 @@ typedef struct s_mlx
 	int		line_len;
 	int		endian;
 }	t_mlx;
+
+typedef struct s_fractol
+{
+	char	*set;
+	double	x_max;
+	double	x_min;
+	double	y_max;
+	double	y_min;
+	double	x_view;
+	double	y_view;
+	int		iter;
+	void	(*f)(struct s_fractol *, struct s_mlx *);
+}	t_fractol;
 
 void	parse_args(int argc, char **argv, t_fractol *fractol);
 void	mlx_handler(t_fractol *fractol);

@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 13:51:41 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/15 01:57:30 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/17 20:09:29 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	mlx_handler(t_fractol *fractol)
 	mlx.win = mlx_new_window(mlx.mlx, WIDTH, HEIGHT, fractol->set);
 	mlx.img = mlx_new_image(mlx.mlx, WIDTH, HEIGHT);
 	mlx.addr = mlx_get_data_addr(mlx.img, &mlx.bpp, &mlx.line_len, &mlx.endian);
-	fractol->f(&fractol, &mlx);
+	fractol->f(fractol, &mlx);
 	mlx_hook(mlx.win, 17, 1L << 0, destroyer, &mlx);
 	mlx_key_hook(mlx.win, key_hook, &mlx);
 	mlx_loop(mlx.mlx);
