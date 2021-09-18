@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 23:45:21 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/12 20:27:29 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/17 20:46:23 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	color(t_fractol *fractol);
 
-void	my_mlx_pixel_put(int x, int y, t_fractol *fractol, t_mlx *mlx)
+void	pixel_put(int x, int y, t_fractol *fractol, t_mlx *mlx)
 {
 	char	*dst;
 

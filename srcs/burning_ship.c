@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 12:17:25 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/14 23:02:46 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/17 20:46:19 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ void	create_burning_ship(t_fractol *fractol, t_mlx *mlx)
 		{
 			window_to_viewport(x, y, fractol, mlx);
 			calculate_burning_ship(fractol);
-			my_mlx_pixel_put(x, y, fractol, mlx);
+			pixel_put(x, y, fractol, mlx);
 			y++;
 		}
 		x++;
 	}
-	mlx_put_image_to_window(mlx->mlx, mlx->win, mlx->img, 0, 0);
+	mlx_expose_hook(mlx->win, put_image_to_window, mlx);
 }
 
 static void	calculate_burning_ship(t_fractol *fractol)

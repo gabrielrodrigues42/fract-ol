@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 13:51:41 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/17 20:09:29 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/17 20:42:06 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,11 @@ static int	key_hook(int keycode, t_mlx *mlx)
 	if (keycode == 65307)
 		destroyer(mlx);
 	printf("Key Pressed: %d\n", keycode);
+	return (0);
+}
+
+int	put_image_to_window(t_mlx *mlx)
+{
+	mlx_put_image_to_window(mlx->mlx, mlx->win, mlx->img, 0, 0);
 	return (0);
 }

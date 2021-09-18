@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 12:11:41 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/14 23:02:42 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/17 20:46:30 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ void	create_mandelbrot(t_fractol *fractol, t_mlx *mlx)
 		{
 			window_to_viewport(x, y, fractol, mlx);
 			calculate_mandelbrot(fractol);
-			my_mlx_pixel_put(x, y, fractol, mlx);
+			pixel_put(x, y, fractol, mlx);
 			y++;
 		}
 		x++;
 	}
-	mlx_put_image_to_window(mlx->mlx, mlx->win, mlx->img, 0, 0);
+	mlx_expose_hook(mlx->win, put_image_to_window, mlx);
 }
 
 static void	calculate_mandelbrot(t_fractol *fractol)

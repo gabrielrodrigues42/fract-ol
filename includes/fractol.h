@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:09:53 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/17 20:18:09 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/17 20:46:12 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ void	create_mandelbrot(t_fractol *fractol, t_mlx *mlx);
 void	create_julia(t_fractol *fractol, t_mlx *mlx);
 void	create_burning_ship(t_fractol *fractol, t_mlx *mlx);
 void	window_to_viewport(int x, int y, t_fractol *fractol, t_mlx *mlx);
-void	my_mlx_pixel_put(int x, int y, t_fractol *fractol, t_mlx *mlx);
+void	pixel_put(int x, int y, t_fractol *fractol, t_mlx *mlx);
+int		put_image_to_window(t_mlx *mlx);
 
 #endif
