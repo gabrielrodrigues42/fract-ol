@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:09:53 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/17 20:46:12 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/22 20:23:59 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 
-# define MAX_ITER 128
+# define MAX_ITER 256
 # define WIDTH 1280
 # define HEIGHT 720
 
@@ -43,6 +43,8 @@ typedef struct s_fractol
 	double	y_min;
 	double	x_view;
 	double	y_view;
+	double	real;
+	double	imaginary;
 	int		iter;
 	void	(*f)(struct s_fractol *, struct s_mlx *);
 }	t_fractol;
