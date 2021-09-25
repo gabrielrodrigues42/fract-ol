@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:09:53 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/25 14:08:57 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/25 18:25:48 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@
 # define SCROLL_UP 4
 # define SCROLL_DOWN 5
 
-# define WIDTH 1280
-# define HEIGHT 720
+# define WIDTH 800
+# define HEIGHT 600
 
-# define MAX_ITER 256
+# define MAX_ITER 128
 
 typedef struct s_points
 {
@@ -74,10 +74,12 @@ void	calculate_mandelbrot(t_vars *vars);
 void	calculate_burningship(t_vars *vars);
 void	calculate_julia(t_vars *vars);
 void	pixel_put(int x, int y, t_vars *vars);
+void	zoom_in(int x, int y, t_vars *vars);
+void	zoom_out(int x, int y, t_vars *vars);
 int		put_image_to_window(t_vars *vars);
 int		destroyer(t_vars *vars);
 int		key_hook(int key, t_vars *vars);
-int		mouse_hook(int key, int x, int y);
-int		mouse_motion_hook(int x, int y);
+int		mouse_hook(int key, int x, int y, t_vars *vars);
+//int		mouse_motion_hook(int x, int y);
 
 #endif
