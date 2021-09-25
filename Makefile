@@ -6,7 +6,7 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/01 18:51:03 by gandrade          #+#    #+#              #
-#    Updated: 2021/09/25 12:04:45 by gandrade         ###   ########.fr        #
+#    Updated: 2021/09/25 13:39:29 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,7 @@ SRCS_FILES = main.c \
             calculate_burningship.c \
             calculate_julia.c \
             pixel_put.c \
+            hooks.c \
             utils.c \
 
 SRCS = $(addprefix $(SRCS_DIR)/, $(SRCS_FILES))

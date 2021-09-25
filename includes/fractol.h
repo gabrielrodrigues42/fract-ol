@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:09:53 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/25 12:05:56 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/25 14:08:57 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,10 @@
 # define WIDTH 1280
 # define HEIGHT 720
 
-# define MAX_ITER 512
+# define MAX_ITER 256
 
 typedef struct s_points
 {
-	double	real;
-	double	imaginary;
 	double	scale_x;
 	double	scale_y;
 	double	x_view;
@@ -45,33 +43,40 @@ typedef struct s_points
 
 typedef struct s_mlx
 {
-	void		*ptr;
-	void		*win;
-	void		*img;
-	char		*addr;
-	int			bpp;
-	int			len;
-	int			endian;
+	void	*ptr;
+	void	*win;
+	void	*img;
+	char	*addr;
+	int		bpp;
+	int		len;
+	int		end;
 }	t_mlx;
 
 typedef struct s_fractol
 {
-	char		*set;
-	void		(*fn)(t_points *);
+	char	*set;
 }	t_fractol;
 
-void	parse_args(int argc, char **argv, t_fractol *fractol);
-void	create_fractol(t_fractol *fractol);
-void	set_limits(t_fractol *fractol, t_points *points);
-void	render_frame(t_fractol *fractol, t_mlx *mlx, t_points *points);
-void	window_to_viewport(int x, int y, t_points *points);
-void	calculate_mandelbrot(t_points *points);
-void	calculate_burningship(t_points *points);
-void	calculate_julia(t_points *points);
-void	pixel_put(int x, int y, t_mlx *mlx, t_points *points);
-int		put_image_to_window(t_mlx *mlx);
-int		destroyer(t_mlx *mlx);
-int		key_hook(int key, t_mlx *mlx);
+typedef struct s_vars
+{
+	t_fractol	fractol;
+	t_points	points;
+	t_mlx		mlx;
+	void		(*fn)(struct s_vars *);
+}	t_vars;
+
+void	parse_args(int argc, char **argv, t_vars *vars);
+void	create_fractol(t_vars *vars);
+void	set_limits(t_vars *vars);
+void	render_frame(t_vars *vars);
+void	window_to_viewport(int x, int y, t_vars *vars);
+void	calculate_mandelbrot(t_vars *vars);
+void	calculate_burningship(t_vars *vars);
+void	calculate_julia(t_vars *vars);
+void	pixel_put(int x, int y, t_vars *vars);
+int		put_image_to_window(t_vars *vars);
+int		destroyer(t_vars *vars);
+int		key_hook(int key, t_vars *vars);
 int		mouse_hook(int key, int x, int y);
 int		mouse_motion_hook(int x, int y);
 

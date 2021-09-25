@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 18:47:06 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/24 00:03:26 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/25 12:16:06 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	main(int argc, char **argv)
 {
-	t_fractol	fractol;
+	t_vars	vars;
 
-	parse_args(argc, argv, &fractol);
-	create_fractol(&fractol);
+	parse_args(argc, argv, &vars);
+	create_fractol(&vars);
 	return (0);
 }

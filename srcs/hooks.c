@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calculate_burningship.c                            :+:      :+:    :+:   */
+/*   hooks.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/24 01:06:09 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/25 12:28:52 by gandrade         ###   ########.fr       */
+/*   Created: 2021/09/25 13:39:04 by gandrade          #+#    #+#             */
+/*   Updated: 2021/09/25 13:57:40 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void	calculate_burningship(t_vars *vars)
+int	key_hook(int key, t_vars *vars)
 {
-	double	x;
-	double	y;
-	double	x2;
-	double	y2;
+	if (key == ESC)
+		destroyer(vars);
+	printf("Key Pressed: %d\n", key);
+	return (0);
+}
 
-	x = 0.0;
-	y = 0.0;
-	x2 = 0.0;
-	y2 = 0.0;
-	vars->points.iter = 0;
-	while (x2 + y2 <= 4 && vars->points.iter < MAX_ITER)
-	{
-		y = fabs(2 * x * y) + vars->points.y_view;
-		x = x2 - y2 + vars->points.x_view;
-		x2 = x * x;
-		y2 = y * y;
-		vars->points.iter++;
-	}
+int	mouse_hook(int key, int x, int y)
+{
+	if (key == SCROLL_UP || key == SCROLL_DOWN)
+		printf("Key Pressed: %d, x: %d, y: %d\n", key, x, y);
+	return (0);
+}
+
+int	mouse_motion_hook(int x, int y)
+{
+	printf("x: %d, y: %d\n", x, y);
+	return (0);
 }
