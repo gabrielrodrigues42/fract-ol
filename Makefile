@@ -6,7 +6,7 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/01 18:51:03 by gandrade          #+#    #+#              #
-#    Updated: 2021/09/17 20:16:00 by gandrade         ###   ########.fr        #
+#    Updated: 2021/09/25 12:04:45 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,8 +34,17 @@ INCLUDES = $(addprefix -I, $(INCLUDES_DIR))
 SRCS_DIR = ./srcs
 OBJS_DIR = ./objs
 
-SRCS_FILES = fractol.c parse_args.c mlx_handler.c mandelbrot.c julia.c \
-             burning_ship.c viewport.c draw_image.c \
+SRCS_FILES = main.c \
+            parse_args.c \
+            create_fractol.c \
+            set_limits.c \
+            render_frame.c \
+            window_to_viewport.c \
+            calculate_mandelbrot.c \
+            calculate_burningship.c \
+            calculate_julia.c \
+            pixel_put.c \
+            utils.c \
 
 SRCS = $(addprefix $(SRCS_DIR)/, $(SRCS_FILES))
 OBJS = $(subst $(SRCS_DIR), $(OBJS_DIR), $(SRCS:.c=.o))
