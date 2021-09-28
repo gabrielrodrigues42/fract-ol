@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 20:13:22 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/25 16:26:21 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/28 00:00:35 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ void	create_fractol(t_vars *vars)
 	vars->mlx.ptr = mlx_init();
 	vars->mlx.win = mlx_new_window(vars->mlx.ptr, WIDTH, HEIGHT, "fractol");
 	vars->mlx.img = mlx_new_image(vars->mlx.ptr, WIDTH, HEIGHT);
-	vars->mlx.addr = mlx_get_data_addr(vars->mlx.img, &vars->mlx.bpp, &vars->mlx.len, &vars->mlx.end);
+	vars->mlx.addr = mlx_get_data_addr(vars->mlx.img, &vars->mlx.bpp,
+			&vars->mlx.len, &vars->mlx.end);
 	set_limits(vars);
 	render_frame(vars);
 	mlx_expose_hook(vars->mlx.win, put_image_to_window, vars);
 	mlx_key_hook(vars->mlx.win, key_hook, vars);
 	mlx_mouse_hook(vars->mlx.win, mouse_hook, vars);
-	//mlx_hook(vars->mlx.win, 6, 1L << 6, mouse_motion_hook, vars);
 	mlx_hook(vars->mlx.win, 17, 1L << 0, destroyer, vars);
 	mlx_loop(vars->mlx.ptr);
 }

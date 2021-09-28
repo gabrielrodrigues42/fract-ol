@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:09:53 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/25 18:25:48 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/28 14:02:39 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,26 @@
 # define SCROLL_UP 4
 # define SCROLL_DOWN 5
 
-# define WIDTH 800
-# define HEIGHT 600
+# define ZOOM_IN 1
+# define ZOOM_OUT -1
+
+# define WIDTH 400
+# define HEIGHT 300
 
 # define MAX_ITER 128
 
+typedef struct s_zoom
+{
+	double	x_ratio;
+	double	y_ratio;
+	double	x_delta;
+	double	y_delta;
+	double	x_delta2;
+	double	y_delta2;
+}	t_zoom;
+
 typedef struct s_points
 {
-	double	scale_x;
-	double	scale_y;
 	double	x_view;
 	double	y_view;
 	double	x_max;
@@ -61,6 +72,7 @@ typedef struct s_vars
 {
 	t_fractol	fractol;
 	t_points	points;
+	t_zoom		zoom;
 	t_mlx		mlx;
 	void		(*fn)(struct s_vars *);
 }	t_vars;
@@ -74,12 +86,10 @@ void	calculate_mandelbrot(t_vars *vars);
 void	calculate_burningship(t_vars *vars);
 void	calculate_julia(t_vars *vars);
 void	pixel_put(int x, int y, t_vars *vars);
-void	zoom_in(int x, int y, t_vars *vars);
-void	zoom_out(int x, int y, t_vars *vars);
 int		put_image_to_window(t_vars *vars);
+void	zoom(int x, int y, int scale_direction, t_vars *vars);
 int		destroyer(t_vars *vars);
 int		key_hook(int key, t_vars *vars);
 int		mouse_hook(int key, int x, int y, t_vars *vars);
-//int		mouse_motion_hook(int x, int y);
 
 #endif
