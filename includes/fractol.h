@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:09:53 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/28 14:02:39 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/09/28 15:10:03 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,9 +85,9 @@ void	window_to_viewport(int x, int y, t_vars *vars);
 void	calculate_mandelbrot(t_vars *vars);
 void	calculate_burningship(t_vars *vars);
 void	calculate_julia(t_vars *vars);
+void	zoom(int x, int y, int scale_direction, t_vars *vars);
 void	pixel_put(int x, int y, t_vars *vars);
 int		put_image_to_window(t_vars *vars);
-void	zoom(int x, int y, int scale_direction, t_vars *vars);
 int		destroyer(t_vars *vars);
 int		key_hook(int key, t_vars *vars);
 int		mouse_hook(int key, int x, int y, t_vars *vars);
