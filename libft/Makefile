@@ -6,13 +6,13 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/18 01:33:41 by gandrade          #+#    #+#              #
-#    Updated: 2021/09/08 23:41:15 by gandrade         ###   ########.fr        #
+#    Updated: 2021/10/05 11:46:06 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = clang
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -O3 -Wall -Wextra -Werror
 LIB = ar -rcs
 RM = rm -f
 
