@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:09:53 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/05 15:57:05 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/05 16:02:35 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,6 @@ typedef struct s_vars
 {
 	t_colors	colors;
 	t_points	points;
-	t_zoom		zoom;
 	t_mlx		mlx;
 	char		*set;
 	void		(*fn)(struct s_vars *);
