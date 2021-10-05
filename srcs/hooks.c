@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/25 13:39:04 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/04 21:43:20 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/05 13:58:51 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,8 @@ int	key_hook(int key, t_vars *vars)
 {
 	if (key == ESC)
 		destroyer(vars);
-	if (key == R)
-	{
-		vars->rgb = &red;
-		render_frame(vars);
-	}
-	if (key == G)
-	{
-		vars->rgb = &green;
-		render_frame(vars);
-	}
-	if (key == B)
-	{
-		vars->rgb = &blue;
-		render_frame(vars);
-	}
+	if (key == C)
+		change_color(++vars->colors.index % 3, vars);
 	return (0);
 }
 

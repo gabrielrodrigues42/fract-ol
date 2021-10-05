@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:09:53 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/05 11:29:11 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/05 15:57:05 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,16 @@
 # include <stdio.h>
 # include <stdlib.h>
 
+# define C 99
 # define ESC 65307
+# define ARROW_UP 65362
+# define ARROW_DOWN 65364
+# define ARROW_LEFT 65361
+# define ARROW_RIGHT 65363
+
 # define SCROLL_UP 4
 # define SCROLL_DOWN 5
 # define MOUSE_LEFT 1
-
-# define R 114
-# define G 103
-# define B 98
 
 # define ZOOM_IN 1
 # define ZOOM_OUT -1
@@ -76,6 +78,7 @@ typedef struct s_colors
 	int	r;
 	int	g;
 	int	b;
+	int	index;
 }	t_colors;
 
 typedef struct s_vars
@@ -91,21 +94,22 @@ typedef struct s_vars
 
 void	parse_args(int argc, char **argv, t_vars *vars);
 void	create_fractol(t_vars *vars);
+void	set_color(t_vars *vars);
 void	set_limits(t_vars *vars);
 void	render_frame(t_vars *vars);
 void	render_julia_frame(int x, int y, t_vars *vars);
 void	window_to_viewport(int x, int y, t_vars *vars);
+void	zoom(int x, int y, int scale_direction, t_vars *vars);
 void	calculate_mandelbrot(t_vars *vars);
 void	calculate_burningship(t_vars *vars);
 void	calculate_julia(t_vars *vars);
-void	zoom(int x, int y, int scale_direction, t_vars *vars);
+void	change_color(int index, t_vars *vars);
 void	put_pixel(int x, int y, t_vars *vars);
-void	set_color(t_vars *vars);
+int		put_image_to_window(t_vars *vars);
 int		color(t_vars *vars);
 int		red(t_vars *vars);
 int		green(t_vars *vars);
 int		blue(t_vars *vars);
-int		put_image_to_window(t_vars *vars);
 int		destroyer(t_vars *vars);
 int		key_hook(int key, t_vars *vars);
 int		mouse_hook(int key, int x, int y, t_vars *vars);

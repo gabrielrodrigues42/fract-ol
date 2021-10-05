@@ -6,7 +6,7 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/01 18:51:03 by gandrade          #+#    #+#              #
-#    Updated: 2021/10/05 11:34:40 by gandrade         ###   ########.fr        #
+#    Updated: 2021/10/05 13:55:52 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,14 +37,14 @@ OBJS_DIR = ./objs
 SRCS_FILES = main.c \
             parse_args.c \
             create_fractol.c \
-            set_limits.c \
+            set.c \
             render_frame.c \
             window_to_viewport.c \
             calculate_mandelbrot.c \
             calculate_burningship.c \
             calculate_julia.c \
-            image.c \
             colors.c \
+            image.c \
             hooks.c \
             zoom.c \
             destroyer.c \
