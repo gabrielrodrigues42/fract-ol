@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 01:05:37 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/25 17:55:20 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/02 14:57:32 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ void	calculate_julia(t_vars *vars)
 	vars->points.iter = 0;
 	while (x2 + y2 <= 4 && vars->points.iter < MAX_ITER)
 	{
-		y = 2 * x * y + 0.355;
-		x = x2 - y2 + 0.355;
+		y = 2 * x * y + vars->points.imaginary;
+		x = x2 - y2 + vars->points.real;
 		x2 = x * x;
 		y2 = y * y;
 		vars->points.iter++;

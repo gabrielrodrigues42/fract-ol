@@ -6,14 +6,14 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/01 18:51:03 by gandrade          #+#    #+#              #
-#    Updated: 2021/09/25 18:07:29 by gandrade         ###   ########.fr        #
+#    Updated: 2021/10/05 11:34:40 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fractol
 
 CC = clang
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -O3 -Wall -Wextra -Werror
 
 RM = rm -rf
 MKDIR = mkdir -p
@@ -43,10 +43,11 @@ SRCS_FILES = main.c \
             calculate_mandelbrot.c \
             calculate_burningship.c \
             calculate_julia.c \
-            pixel_put.c \
+            image.c \
+            colors.c \
             hooks.c \
             zoom.c \
-            utils.c \
+            destroyer.c \
 
 SRCS = $(addprefix $(SRCS_DIR)/, $(SRCS_FILES))
 OBJS = $(subst $(SRCS_DIR), $(OBJS_DIR), $(SRCS:.c=.o))

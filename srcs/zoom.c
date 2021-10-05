@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/25 14:22:55 by gandrade          #+#    #+#             */
-/*   Updated: 2021/09/28 14:01:30 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/03 14:04:57 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,18 @@ void	zoom(int x, int y, int scale_direction, t_vars *vars)
 	vars->zoom.y_ratio = (double)y / HEIGHT;
 	vars->zoom.x_delta = vars->points.x_max - vars->points.x_min;
 	vars->zoom.y_delta = vars->points.y_max - vars->points.y_min;
-	if (scale_direction == 1)
+	if (scale_direction == ZOOM_IN)
 	{
-		vars->zoom.x_delta2 = (1.1 * vars->zoom.x_delta)
+		vars->zoom.x_delta2 = (ZOOM_FACTOR * vars->zoom.x_delta)
 			- vars->zoom.x_delta;
-		vars->zoom.y_delta2 = (1.1 * vars->zoom.y_delta)
+		vars->zoom.y_delta2 = (ZOOM_FACTOR * vars->zoom.y_delta)
 			- vars->zoom.y_delta;
 	}
-	if (scale_direction == -1)
+	if (scale_direction == ZOOM_OUT)
 	{
-		vars->zoom.x_delta2 = (1 / 1.1 * vars->zoom.x_delta)
+		vars->zoom.x_delta2 = (1 / ZOOM_FACTOR * vars->zoom.x_delta)
 			- vars->zoom.x_delta;
-		vars->zoom.y_delta2 = (1 / 1.1 * vars->zoom.y_delta)
+		vars->zoom.y_delta2 = (1 / ZOOM_FACTOR * vars->zoom.y_delta)
 			- vars->zoom.y_delta;
 	}
 	vars->points.x_min -= vars->zoom.x_delta2 * vars->zoom.x_ratio;
