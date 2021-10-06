@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:09:53 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/05 21:38:23 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/05 21:49:34 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ typedef struct s_vars
 	t_points	points;
 	t_mlx		mlx;
 	char		*set;
-	void		(*calc)(struct s_vars *);
+	void		(*calculate)(struct s_vars *);
 	int			(*color)(struct s_vars *);
 }	t_vars;
 

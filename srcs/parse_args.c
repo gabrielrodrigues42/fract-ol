@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 18:55:49 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/05 21:40:34 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/05 22:04:50 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	parse_args(int argc, char **argv, t_vars *vars)
 	if (argc == 1)
 		print_help();
 	else if (ft_strcmp((ft_strtolower(vars->set)), "mandelbrot") == 0)
-		vars->calc = &calculate_mandelbrot;
+		vars->calculate = &calculate_mandelbrot;
 	else if (ft_strcmp((ft_strtolower(vars->set)), "burningship") == 0)
-		vars->calc = &calculate_burningship;
+		vars->calculate = &calculate_burningship;
 	else if (ft_strcmp((ft_strtolower(vars->set)), "julia") == 0)
 		parse_julia(argc, argv, vars);
 	else
@@ -46,7 +46,7 @@ static void	parse_julia(int argc, char **argv, t_vars *vars)
 		vars->points.real = atof(argv[2]);
 		vars->points.imaginary = atof(argv[4]);
 	}
-	vars->calc = &calculate_julia;
+	vars->calculate = &calculate_julia;
 }
 
 static void	print_help(void)
