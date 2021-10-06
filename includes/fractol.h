@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:09:53 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/05 21:49:34 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/05 23:08:35 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,6 @@
 # define HEIGHT 600
 
 # define MAX_ITER 100
-
-typedef struct s_zoom
-{
-	double	x_ratio;
-	double	y_ratio;
-	double	x_delta;
-	double	y_delta;
-	double	x_delta2;
-	double	y_delta2;
-}	t_zoom;
 
 typedef struct s_points
 {
