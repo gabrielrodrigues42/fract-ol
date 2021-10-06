@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/25 13:39:04 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/05 13:58:51 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/05 16:50:48 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,14 @@ int	key_hook(int key, t_vars *vars)
 		destroyer(vars);
 	if (key == C)
 		change_color(++vars->colors.index % 3, vars);
+	if (key == ARROW_UP)
+		shift_up(vars);
+	if (key == ARROW_DOWN)
+		shift_down(vars);
+	if (key == ARROW_LEFT)
+		shift_left(vars);
+	if (key == ARROW_RIGHT)
+		shift_right(vars);
 	return (0);
 }
 

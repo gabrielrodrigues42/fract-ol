@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 00:40:03 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/05 13:55:14 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/05 21:40:50 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	set_color(t_vars *vars)
 {
-	vars->rgb = &blue;
+	vars->color = &blue;
 }
 
 void	set_limits(t_vars *vars)

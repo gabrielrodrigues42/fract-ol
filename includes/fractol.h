@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:09:53 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/05 16:02:35 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/05 21:38:23 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,8 +87,8 @@ typedef struct s_vars
 	t_points	points;
 	t_mlx		mlx;
 	char		*set;
-	void		(*fn)(struct s_vars *);
-	int			(*rgb)(struct s_vars *);
+	void		(*calc)(struct s_vars *);
+	int			(*color)(struct s_vars *);
 }	t_vars;
 
 void	parse_args(int argc, char **argv, t_vars *vars);
@@ -102,6 +102,10 @@ void	zoom(int x, int y, int scale_direction, t_vars *vars);
 void	calculate_mandelbrot(t_vars *vars);
 void	calculate_burningship(t_vars *vars);
 void	calculate_julia(t_vars *vars);
+void	shift_up(t_vars *vars);
+void	shift_down(t_vars *vars);
+void	shift_left(t_vars *vars);
+void	shift_right(t_vars *vars);
 void	change_color(int index, t_vars *vars);
 void	put_pixel(int x, int y, t_vars *vars);
 int		put_image_to_window(t_vars *vars);

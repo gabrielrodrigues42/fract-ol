@@ -6,7 +6,7 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/01 18:51:03 by gandrade          #+#    #+#              #
-#    Updated: 2021/10/05 13:55:52 by gandrade         ###   ########.fr        #
+#    Updated: 2021/10/05 16:36:04 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,7 @@ SRCS_FILES = main.c \
             image.c \
             hooks.c \
             zoom.c \
+            shift.c \
             destroyer.c \
 
 SRCS = $(addprefix $(SRCS_DIR)/, $(SRCS_FILES))
