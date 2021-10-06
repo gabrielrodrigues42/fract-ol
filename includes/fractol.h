@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:09:53 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/05 23:08:35 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/05 23:48:15 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <stdlib.h>
 
 # define C 99
+# define R 114
 # define ESC 65307
 # define ARROW_UP 65362
 # define ARROW_DOWN 65364
@@ -96,6 +97,7 @@ void	shift_up(t_vars *vars);
 void	shift_down(t_vars *vars);
 void	shift_left(t_vars *vars);
 void	shift_right(t_vars *vars);
+void	reset_image(t_vars *vars);
 void	change_color(int index, t_vars *vars);
 void	put_pixel(int x, int y, t_vars *vars);
 int		put_image_to_window(t_vars *vars);

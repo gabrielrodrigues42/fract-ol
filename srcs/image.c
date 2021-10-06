@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   put_pixel.c                                        :+:      :+:    :+:   */
+/*   image.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 16:49:23 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/04 20:59:30 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/05 23:47:33 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,10 @@ int	put_image_to_window(t_vars *vars)
 {
 	mlx_put_image_to_window(vars->mlx.ptr, vars->mlx.win, vars->mlx.img, 0, 0);
 	return (0);
+}
+
+void	reset_image(t_vars *vars)
+{
+	set_limits(vars);
+	render_frame(vars);
 }
