@@ -18,7 +18,7 @@ void	zoom(int x, int y, int scale_direction, t_vars *vars)
 	double	y_ratio;
 	double	x_delta;
 	double	y_delta;
-	
+
 	x_ratio = (double)x / WIDTH;
 	y_ratio = (double)y / HEIGHT;
 	x_delta = vars->points.x_max - vars->points.x_min;
