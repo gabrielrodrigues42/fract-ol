@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/25 13:39:04 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/05 23:50:09 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/06 13:55:00 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,9 @@ int	key_hook(int key, t_vars *vars)
 		reset_image(vars);
 	if (key == C)
 		change_color(++vars->colors.index % 3, vars);
-	if (key == ARROW_UP)
-		shift_up(vars);
-	if (key == ARROW_DOWN)
-		shift_down(vars);
-	if (key == ARROW_LEFT)
-		shift_left(vars);
-	if (key == ARROW_RIGHT)
-		shift_right(vars);
+	if (key == ARROW_UP || key == ARROW_DOWN
+		|| key == ARROW_LEFT || key == ARROW_RIGHT)
+		shift(key, vars);
 	return (0);
 }
 

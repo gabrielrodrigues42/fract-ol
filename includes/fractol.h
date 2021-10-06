@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:09:53 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/05 23:48:15 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/06 13:55:15 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,10 +93,7 @@ void	zoom(int x, int y, int scale_direction, t_vars *vars);
 void	calculate_mandelbrot(t_vars *vars);
 void	calculate_burningship(t_vars *vars);
 void	calculate_julia(t_vars *vars);
-void	shift_up(t_vars *vars);
-void	shift_down(t_vars *vars);
-void	shift_left(t_vars *vars);
-void	shift_right(t_vars *vars);
+void	shift(int key, t_vars *vars);
 void	reset_image(t_vars *vars);
 void	change_color(int index, t_vars *vars);
 void	put_pixel(int x, int y, t_vars *vars);
