@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 16:35:51 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/06 13:56:55 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/07 01:01:49 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,29 @@ void	shift(int key, t_vars *vars)
 
 static void	shift_up(t_vars *vars)
 {
-	printf("%s\n", vars->set);
+	vars->points.y_max -= 0.1;
+	vars->points.y_min -= 0.1;
+	render_frame(vars);
 }
 
 static void	shift_down(t_vars *vars)
 {
-	printf("%s\n", vars->set);
+	vars->points.y_max += 0.1;
+	vars->points.y_min += 0.1;
+	render_frame(vars);
 }
 
 static void	shift_left(t_vars *vars)
 {
-	printf("%s\n", vars->set);
+	vars->points.x_max -= 0.1;
+	vars->points.x_min -= 0.1;
+	render_frame(vars);
 }
 
 static void	shift_right(t_vars *vars)
 {
-	printf("%s\n", vars->set);
+	vars->points.x_max += 0.1;
+	vars->points.x_min += 0.1;
+	render_frame(vars);
 }
+
