@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 16:35:51 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/07 01:01:49 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/07 22:37:44 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,3 @@ static void	shift_right(t_vars *vars)
 	vars->points.x_min += 0.1;
 	render_frame(vars);
 }
-
