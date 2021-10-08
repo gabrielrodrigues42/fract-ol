@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 01:33:39 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/05 11:45:20 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/08 11:57:54 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ int		ft_isspace(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(const char *str);
+double	ft_atof(const char *str);
 char	*ft_itoa(int n);
 char	*ft_utoa(unsigned int n);
 char	*ft_htoa(unsigned int n, int converter);
