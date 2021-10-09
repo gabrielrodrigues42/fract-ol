@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 18:55:49 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/08 21:55:56 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/08 22:00:32 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,9 +68,6 @@ static void	print_help(void)
 	printf("Ex: ./fractol burning-ship\n");
 	printf("Ex: ./fractol julia\n");
 	printf("Ex: ./fractol julia 0.355 + 0.355i\n\n");
-	printf("Obs: For Julia Set, you should pass a formula, which the first argument is the real part, which is a");
-	printf(" number between 2 and -2, followed with a \"+\" sign, and the second argument is the imaginary part which is a number between");
-	printf(" 1.5 and -1.5 followed with \"i\" which is the imaginary sign.\n");
 	printf("Obs: Input is not case sensitive.\n\n");
 	exit(0);
 }
