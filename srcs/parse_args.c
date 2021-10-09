@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 18:55:49 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/08 22:00:32 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/08 22:04:16 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static void	parse_julia(int argc, char **argv, t_vars *vars)
 		vars->points.real = 0.0;
 		vars->points.imaginary = 0.0;
 	}
-	else if (argc == 3 || argc == 4)
+	else if (argc == 3 || argc == 4 || argc > 5)
 		print_help();
 	else if (argc >= 4)
 		len = ft_strlen(argv[4]);
