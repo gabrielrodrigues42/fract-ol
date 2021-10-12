@@ -6,7 +6,7 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/01 18:51:03 by gandrade          #+#    #+#              #
-#    Updated: 2021/10/05 16:36:04 by gandrade         ###   ########.fr        #
+#    Updated: 2021/10/12 13:50:25 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME = fractol
 
 CC = clang
 CFLAGS = -O3 -Wall -Wextra -Werror
+SAN = -g3 -fsanitize=address
 
 RM = rm -rf
 MKDIR = mkdir -p
@@ -36,6 +37,8 @@ OBJS_DIR = ./objs
 
 SRCS_FILES = main.c \
             parse_args.c \
+            parse_julia.c \
+            print_help.c \
             create_fractol.c \
             set.c \
             render_frame.c \
@@ -82,4 +85,7 @@ re: fclean all
 norm:
 	norminette libft includes srcs
 
-.PHONY: all clean fclean re norm
+san:
+	$(CC) $(CFLAGS) $(SAN) $(OBJS) $(MLX_FLAGS) $(LIBFT_FLAGS) $(SYS_FLAGS) $(INCLUDES) -o $(NAME)
+
+.PHONY: all clean fclean re norm san

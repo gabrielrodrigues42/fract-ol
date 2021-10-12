@@ -6,11 +6,17 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 00:40:03 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/08 17:20:03 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/10 13:21:05 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
+
+void	set_julia(t_vars *vars)
+{
+	vars->points.real = 0.0;
+	vars->points.imaginary = 0.0;
+}
 
 void	set_color(t_vars *vars)
 {

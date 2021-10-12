@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:09:53 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/06 13:55:15 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/12 18:17:18 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,12 +78,16 @@ typedef struct s_vars
 	t_points	points;
 	t_mlx		mlx;
 	char		*set;
+	char		*complex;
 	void		(*calculate)(struct s_vars *);
 	int			(*color)(struct s_vars *);
 }	t_vars;
 
 void	parse_args(int argc, char **argv, t_vars *vars);
+void	parse_julia(int argc, char **argv, t_vars *vars);
+void	print_help(void);
 void	create_fractol(t_vars *vars);
+void	set_julia(t_vars *vars);
 void	set_color(t_vars *vars);
 void	set_limits(t_vars *vars);
 void	render_frame(t_vars *vars);
