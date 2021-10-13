@@ -6,7 +6,7 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/01 18:51:03 by gandrade          #+#    #+#              #
-#    Updated: 2021/10/12 13:50:25 by gandrade         ###   ########.fr        #
+#    Updated: 2021/10/12 19:38:34 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,8 @@ OBJS_DIR = ./objs
 SRCS_FILES = main.c \
             parse_args.c \
             parse_julia.c \
+            parse_complex.c \
+            parse_complex_utils.c \
             print_help.c \
             create_fractol.c \
             set.c \
