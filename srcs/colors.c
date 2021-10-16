@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 18:56:56 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/15 21:51:09 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/15 22:26:57 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	color(t_vars *vars)
 	double	t;
 	int		rgb;
 
-	t = (double)pow(log(vars->points.iter), 3) / pow(log(MAX_ITER), 3);
+	t = (double)vars->points.iter / MAX_ITER;
 	vars->colors.r = 9 * (1 - t) * t * t * t * 255;
 	vars->colors.g = 15 * (1 - t) * (1 - t) * t * t * 255;
 	vars->colors.b = 8.5 * (1 - t) * (1 - t) * (1 - t) * t * 255;
