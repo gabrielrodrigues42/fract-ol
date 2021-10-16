@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 18:56:56 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/05 21:39:27 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/15 21:51:09 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ void	change_color(int index, t_vars *vars)
 {
 	int	(*selector[3])(t_vars *);
 
-	selector[0] = &red;
-	selector[1] = &blue;
+	selector[0] = &blue;
+	selector[1] = &red;
 	selector[2] = &green;
 	vars->color = selector[index];
 	render_frame(vars);
