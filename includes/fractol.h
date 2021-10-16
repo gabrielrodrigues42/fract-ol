@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:09:53 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/15 21:42:06 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/15 21:57:08 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@
 # define ZOOM_FACTOR 1.05
 # define SHIFT_FACTOR 0.05
 
-# define WIDTH 800
-# define HEIGHT 600
+# define WIDTH 600
+# define HEIGHT 480
 
 # define MAX_ITER 100
 
