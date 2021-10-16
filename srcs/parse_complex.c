@@ -6,12 +6,13 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 19:27:00 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/12 19:47:25 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/15 21:42:31 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
+static char	*join_args(char **argv);
 static void	atocomplex(char **argv, t_vars *vars);
 
 void	parse_complex(char **argv, t_vars *vars)
@@ -37,6 +38,24 @@ void	parse_complex(char **argv, t_vars *vars)
 	else
 		atocomplex(argv, vars);
 	free(str);
+}
+
+static char	*join_args(char **argv)
+{
+	char	*str;
+	char	*temp;
+
+	str = ft_strjoin(argv[2], " ");
+	temp = str;
+	str = ft_strjoin(str, argv[3]);
+	free(temp);
+	temp = str;
+	str = ft_strjoin(str, " ");
+	free(temp);
+	temp = str;
+	str = ft_strjoin(str, argv[4]);
+	free(temp);
+	return (str);
 }
 
 static void	atocomplex(char **argv, t_vars *vars)

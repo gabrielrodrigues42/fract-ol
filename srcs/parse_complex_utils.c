@@ -6,31 +6,13 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 19:28:02 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/13 12:20:22 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/15 21:41:54 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
 static int	valid_position(char *str, int i, int space);
-
-char	*join_args(char **argv)
-{
-	char	*str;
-	char	*temp;
-
-	str = ft_strjoin(argv[2], " ");
-	temp = str;
-	str = ft_strjoin(str, argv[3]);
-	free(temp);
-	temp = str;
-	str = ft_strjoin(str, " ");
-	free(temp);
-	temp = str;
-	str = ft_strjoin(str, argv[4]);
-	free(temp);
-	return (str);
-}
 
 int	check_valid_chars(char *str)
 {
