@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 00:40:03 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/15 22:16:41 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/18 19:02:24 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	set_julia(t_vars *vars)
 
 void	set_color(t_vars *vars)
 {
+	vars->colors.index = 0;
 	vars->color = &blue;
 }
 
