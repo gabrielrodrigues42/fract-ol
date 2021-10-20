@@ -6,25 +6,25 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 00:40:03 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/18 19:02:24 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/19 19:38:01 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void	set_julia(t_vars *vars)
+void	set_default_julia(t_vars *vars)
 {
 	vars->points.real = 0.0;
 	vars->points.imaginary = 0.0;
 }
 
-void	set_color(t_vars *vars)
+void	set_default_color(t_vars *vars)
 {
 	vars->colors.index = 0;
-	vars->color = &blue;
+	vars->fn_color = &blue;
 }
 
-void	set_limits(t_vars *vars)
+void	set_default_limits(t_vars *vars)
 {
 	if (ft_strcmp(vars->set, "mandelbrot") == 0)
 	{

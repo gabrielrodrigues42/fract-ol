@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 16:49:23 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/05 23:47:33 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/18 22:44:18 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ int	put_image_to_window(t_vars *vars)
 
 void	reset_image(t_vars *vars)
 {
-	set_limits(vars);
+	set_default_limits(vars);
 	render_frame(vars);
 }

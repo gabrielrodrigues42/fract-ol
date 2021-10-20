@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 19:27:00 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/15 21:42:31 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/19 20:44:21 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ void	parse_complex(char **argv, t_vars *vars)
 	char	*str;
 
 	str = join_args(argv);
-	if (check_valid_chars(str) == 1)
+	if (check_valid_characters(str) == 1)
 	{
 		free(str);
 		print_help();
 	}
-	else if (count_valid_chars(str) == 1)
+	else if (count_valid_characters(str) == 1)
 	{
 		free(str);
 		print_help();

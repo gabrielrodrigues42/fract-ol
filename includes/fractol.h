@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 02:09:53 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/15 22:35:25 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/19 21:18:53 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,8 +79,8 @@ typedef struct s_vars
 	t_points	points;
 	t_mlx		mlx;
 	char		*set;
-	void		(*calculate)(struct s_vars *);
-	int			(*color)(struct s_vars *);
+	void		(*fn_calculate)(struct s_vars *);
+	int			(*fn_color)(struct s_vars *);
 }	t_vars;
 
 void	parse_args(int argc, char **argv, t_vars *vars);
@@ -88,9 +88,9 @@ void	parse_julia(int argc, char **argv, t_vars *vars);
 void	parse_complex(char **argv, t_vars *vars);
 void	print_help(void);
 void	create_fractol(t_vars *vars);
-void	set_julia(t_vars *vars);
-void	set_color(t_vars *vars);
-void	set_limits(t_vars *vars);
+void	set_default_julia(t_vars *vars);
+void	set_default_color(t_vars *vars);
+void	set_default_limits(t_vars *vars);
 void	render_frame(t_vars *vars);
 void	render_julia_frame(int x, int y, t_vars *vars);
 void	window_to_viewport(int x, int y, t_vars *vars);
@@ -110,8 +110,8 @@ int		blue(t_vars *vars);
 int		destroyer(t_vars *vars);
 int		key_hook(int key, t_vars *vars);
 int		mouse_hook(int key, int x, int y, t_vars *vars);
-int		check_valid_chars(char *str);
-int		count_valid_chars(char *str);
+int		check_valid_characters(char *str);
+int		count_valid_characters(char *str);
 int		check_valid_position(char *str);
 
 #endif

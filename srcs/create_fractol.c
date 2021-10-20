@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 20:13:22 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/04 22:18:04 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/18 22:42:46 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	create_fractol(t_vars *vars)
 	vars->mlx.img = mlx_new_image(vars->mlx.ptr, WIDTH, HEIGHT);
 	vars->mlx.addr = mlx_get_data_addr(vars->mlx.img, &vars->mlx.bpp,
 			&vars->mlx.len, &vars->mlx.end);
-	set_color(vars);
-	set_limits(vars);
+	set_default_color(vars);
+	set_default_limits(vars);
 	render_frame(vars);
 	mlx_expose_hook(vars->mlx.win, put_image_to_window, vars);
 	mlx_key_hook(vars->mlx.win, key_hook, vars);

@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 19:28:02 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/15 21:41:54 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/18 22:43:58 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	valid_position(char *str, int i, int space);
 
-int	check_valid_chars(char *str)
+int	check_valid_characters(char *str)
 {
 	while (*str)
 	{
@@ -26,7 +26,7 @@ int	check_valid_chars(char *str)
 	return (0);
 }
 
-int	count_valid_chars(char *str)
+int	count_valid_characters(char *str)
 {
 	int		sign;
 	int		dot;

@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 20:42:13 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/05 22:04:56 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/19 19:37:45 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	render_frame(t_vars *vars)
 		while (y < HEIGHT)
 		{
 			window_to_viewport(x, y, vars);
-			vars->calculate(vars);
+			vars->fn_calculate(vars);
 			put_pixel(x, y, vars);
 			y++;
 		}

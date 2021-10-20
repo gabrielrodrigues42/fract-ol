@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 18:56:56 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/15 22:26:57 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/19 19:40:17 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	color(t_vars *vars)
 	vars->colors.r = 9 * (1 - t) * t * t * t * 255;
 	vars->colors.g = 15 * (1 - t) * (1 - t) * t * t * 255;
 	vars->colors.b = 8.5 * (1 - t) * (1 - t) * (1 - t) * t * 255;
-	rgb = vars->color(vars);
+	rgb = vars->fn_color(vars);
 	return (rgb);
 }
 
@@ -32,7 +32,7 @@ void	change_color(int index, t_vars *vars)
 	selector[0] = &blue;
 	selector[1] = &red;
 	selector[2] = &green;
-	vars->color = selector[index];
+	vars->fn_color = selector[index];
 	render_frame(vars);
 }
 
