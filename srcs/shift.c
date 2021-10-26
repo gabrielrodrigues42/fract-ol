@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 16:35:51 by gandrade          #+#    #+#             */
-/*   Updated: 2021/10/15 21:37:27 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/10/26 11:53:40 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,19 @@ static void	shift_right(t_vars *vars, double delta);
 
 void	shift(int key, t_vars *vars)
 {
-	double	delta;
+	double	x_delta;
+	double	y_delta;
 
-	delta = (vars->points.x_max - vars->points.x_min);
+	x_delta = (vars->points.x_max - vars->points.x_min);
+	y_delta = (vars->points.y_max - vars->points.y_min);
 	if (key == ARROW_UP)
-		shift_up(vars, delta);
+		shift_up(vars, y_delta);
 	if (key == ARROW_DOWN)
-		shift_down(vars, delta);
+		shift_down(vars, y_delta);
 	if (key == ARROW_LEFT)
-		shift_left(vars, delta);
+		shift_left(vars, x_delta);
 	if (key == ARROW_RIGHT)
-		shift_right(vars, delta);
+		shift_right(vars, x_delta);
 }
 
 static void	shift_up(t_vars *vars, double delta)
