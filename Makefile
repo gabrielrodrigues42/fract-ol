@@ -6,7 +6,7 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/01 18:51:03 by gandrade          #+#    #+#              #
-#    Updated: 2021/10/12 19:38:34 by gandrade         ###   ########.fr        #
+#    Updated: 2021/11/20 14:57:34 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,13 +29,13 @@ LIBFT_FLAGS = -L$(LIBFT_DIR) -lft
 
 SYS_FLAGS = -lXext -lX11 -lm
 
-INCLUDES_DIR = ./includes $(MLX_DIR) $(LIBFT_DIR)
-INCLUDES = $(addprefix -I, $(INCLUDES_DIR))
+INCLUDE_DIR = ./include $(MLX_DIR) $(LIBFT_DIR)
+INCLUDE = $(addprefix -I, $(INCLUDE_DIR))
 
-SRCS_DIR = ./srcs
-OBJS_DIR = ./objs
+SRC_DIR = ./src
+OBJ_DIR = ./obj
 
-SRCS_FILES = main.c \
+SRC_FILES = main.c \
             parse_args.c \
             parse_julia.c \
             parse_complex.c \
@@ -55,15 +55,15 @@ SRCS_FILES = main.c \
             shift.c \
             destroyer.c \
 
-SRCS = $(addprefix $(SRCS_DIR)/, $(SRCS_FILES))
-OBJS = $(subst $(SRCS_DIR), $(OBJS_DIR), $(SRCS:.c=.o))
+SRC = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
+OBJ = $(subst $(SRC_DIR), $(OBJ_DIR), $(SRC:.c=.o))
 
-$(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c
-	$(MKDIR) $(OBJS_DIR)
-	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	$(MKDIR) $(OBJ_DIR)
+	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
-$(NAME): $(MLX) $(LIBFT) $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) $(MLX_FLAGS) $(LIBFT_FLAGS) $(SYS_FLAGS) $(INCLUDES) -o $@
+$(NAME): $(MLX) $(LIBFT) $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) $(MLX_FLAGS) $(LIBFT_FLAGS) $(SYS_FLAGS) $(INCLUDE) -o $@
 
 $(MLX):
 	$(MAKE) -C $(MLX_DIR)
@@ -75,7 +75,7 @@ all: $(NAME)
 
 clean:
 	$(MAKE) clean -C $(LIBFT_DIR)
-	$(RM) $(OBJS_DIR)
+	$(RM) $(OBJ_DIR)
 
 fclean: clean
 	$(MAKE) clean -C $(MLX_DIR)
@@ -85,9 +85,9 @@ fclean: clean
 re: fclean all
 
 norm:
-	norminette libft includes srcs
+	norminette libft include src
 
 san:
-	$(CC) $(CFLAGS) $(SAN) $(OBJS) $(MLX_FLAGS) $(LIBFT_FLAGS) $(SYS_FLAGS) $(INCLUDES) -o $(NAME)
+	$(CC) $(CFLAGS) $(SAN) $(OBJ) $(MLX_FLAGS) $(LIBFT_FLAGS) $(SYS_FLAGS) $(INCLUDE) -o $(NAME)
 
 .PHONY: all clean fclean re norm san
